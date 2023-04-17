@@ -1,0 +1,32 @@
+html, body {
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+canvas {
+	width: 100%;
+}
+
+.bar {
+	width: 100%;
+	background-color: #ddd;
+}
+
+#Diagoras-monument, #not-Diagoras-monument{
+	width: 0%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+}
+
+#Diagoras-monument {
+	background-color: green;
+}
+
+#not-Diagoras-monument {
+	background-color: red;
+}
