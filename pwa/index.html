@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<div id="webcam-container"></div>
+	<div id="label-container"></div>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Simple PWA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Icons and Colors -->
+	<link rel="manifest" href="./manifest.json">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="./favicon.ico">
+
+	<!-- SEO and Social Sharing and SEO -->
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Javscript -->
+	<script>
+		if ("serviceWorker" in navigator) {
+			window.addEventListener("load", () => {
+				navigator.serviceWorker && navigator.serviceWorker.register("./sw.js");
+			});
+		}
+	</script>
+	<script defer src="./main.js"></script>
+</head>
+
+<body>
+
+	<div id="label-container">
+		<div id="bar-1" class="bar">
+			Diagoras monument:
+			<div id="Diagoras-monument"></div>
+		</div>
+		<div id="bar-2" class="bar">
+			Not the Diagoras monument:
+			<div id="not-Diagoras-monument"></div>
+		</div>
+	</div>
+	<button id="init-button" type="button" onclick="init()">Start</button>
+
+</body>
+
+</html>
